@@ -1,23 +1,14 @@
 
+function jokers() {
+    var img = document.createElement('img');
+    img.src = "black";
+    document.body.appendChild(img);
+}
+
+
+
 
 //The Deck of cards
-
-var name1 = prompt("What's the name of the first player");
-        document.getElementById('player1').innerHTML = name1
-var name2 = prompt("What's the name of the second player")
-        document.getElementById('player2').innerHTML = name2
-
-
-var score = 0;
-var scores = 0;
-
-var gameScore = document.getElementById('player1');
-var scoreCount = document.createTextNode("has " + score)
-
-
-var gameScore2 = document.getElementById('player2');
-var scoreCount2 = document.createTextNode("has " + scores)
-
 
 var game = document.getElementById('start')
 game.addEventListener("click", function (){
@@ -38,10 +29,8 @@ var cards = ["queen_of_clubs.png", "king_of_hearts.png", "king_of_diamonds.png",
 "2_of_diamonds.png"]
 
 
-
-
-
-
+// var playingCardOne = document.getElementById('card1');
+// var theFirstCard = document.createTextNode(cards[0]);
 
 
 //Shuffling the deck, and removing cards and handing them to players
@@ -61,7 +50,6 @@ console.log(card2);
 console.log(card3);
 console.log(card4);
 console.log(cards);
-
 
 var playerhand1 = card1 + " " + card2;
 var playerhand2 = card3 + " " + card4;
@@ -85,25 +73,14 @@ var p1points = pointSystem(card1) + pointSystem(card2)
 
 var p2points = pointSystem(card3) + pointSystem(card4);
 
-alert(name1 + " has " + playerhand1 + " and " + name2 + " has " + playerhand2 + " the totals are " + p1points + " " + p2points);
+alert("P1 has " + playerhand1 + " and player2 has " + playerhand2 + " the totals are " + p1points + " " + p2points);
 
 
 if (p1points > p2points){
-    alert(name1 + ' wins')
-    score = score + 1
-    return score
-
+    alert('player1 wins')
   }else if(p2points > p1points){
-    alert(name2 + ' wins')
-    scores = scores + 1
-    return scores
-
-  }else{
+    alert('player2 wins')
+    }else{
       alert('tie')
     }
-
-
-
-    gameScore.appendChild(scoreCount);
-    gameScore2.appendChild(scoreCount2);
 });
