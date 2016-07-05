@@ -1,18 +1,45 @@
 .container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  border: solid black 2px;
+  background-color: green;
 }
 
-
-.p1cards{
+#player1 {
+  height: 30px;
+  width: 60px;
+  border: solid pink 2px;
+}
+#player2 {
+  height: 30px;
+  width: 60px;
+  border: solid black 2px;
+  margin-top: -300px;
+}
+#card1{
   width: 125px;
   height: 250px;
   border: solid black 2px;
+  background-color: #454542;
 }
-.p2cards{
+#card2{
   width: 125px;
   height: 250px;
   border: solid black 2px;
+  background-color: #454542;
+}
+#card3{
+  width: 125px;
+  height: 250px;
+  border: solid black 2px;
+  background-color: #454542;
+}
+#card4{
+  width: 125px;
+  height: 250px;
+  border: solid black 2px;
+  background-color: #454542;
 }
 #button{
     margin-top: 500px;
@@ -23,5 +50,5 @@
   height: 250px;
   border: solid black 2px;
   margin: 250px;
-
+  background-color: purple;
 }
