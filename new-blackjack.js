@@ -1,9 +1,13 @@
+var name1 = prompt("What's the first players name");
+  document.getElementById('player1').innerHTML = name1
 
-function jokers() {
-    var img = document.createElement('img');
-    img.src = "black";
-    document.body.appendChild(img);
-}
+  var name2 = prompt("What's the second player's name");
+  document.getElementById('player2').innerHTML = name2
+
+  var score = 0;
+  var score2 = 0;
+
+
 
 
 
@@ -73,13 +77,17 @@ var p1points = pointSystem(card1) + pointSystem(card2)
 
 var p2points = pointSystem(card3) + pointSystem(card4);
 
-alert("P1 has " + playerhand1 + " and player2 has " + playerhand2 + " the totals are " + p1points + " " + p2points);
+alert(name1 +" has " + playerhand1 + " and "+ name2 + " has " + playerhand2 + " the totals are " + p1points + " " + p2points);
 
 
 if (p1points > p2points){
-    alert('player1 wins')
+    alert(name1 +  ' wins')
+    score = score + 1
+    return score
   }else if(p2points > p1points){
-    alert('player2 wins')
+    alert(name2 + ' wins')
+    score2 = score2 + 1
+    return score2
     }else{
       alert('tie')
     }
