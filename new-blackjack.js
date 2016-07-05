@@ -1,6 +1,9 @@
 
 
 //The Deck of cards
+var src = document.getElementById('p1card1')
+var img = document.createElement("img")
+
 
 var game = document.getElementById('start')
 game.addEventListener("click", function (){
@@ -24,7 +27,7 @@ game.addEventListener("click", function (){
 
 
 
-var cards = Array();
+var cards = new Array();
 cards[0] = new Image();
 cards[0].src = "queen_of_clubs.png",
 cards[1] = new Image();
@@ -128,8 +131,7 @@ cards[49].src = "2_of_spades.png",
 cards[50] = new Image();
 cards[50].src = "2_of_hearts.png",
 cards[51] = new Image();
-cards[52].src = "2_of_diamonds.png",
-cards[52] = new Image();
+cards[51].src = "2_of_diamonds.png";
 
 
 
@@ -151,7 +153,7 @@ console.log(card3);
 console.log(card4);
 console.log(cards);
 
-
+src.appendChild('img')
 
 var playerhand1 = card1 + " " + card2;
 var playerhand2 = card3 + " " + card4;
